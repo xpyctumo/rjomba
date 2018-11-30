@@ -1,23 +1,30 @@
 var rjomba_idet = "net";
-var roflan;
+var roflan, last_rjomba;
 
 var Sanya = {
     init_rjomba: function(d) {
+        var rofl = d.getAttribute("data-rjaka");
         if (rjomba_idet == "net") {
-            var rofl = d.getAttribute("data-rjaka");
-            Sanya.start_rjomba(rofl,true);
+            Sanya.start_rjomba(rofl, true);
+            last_rjomba = rofl;
             rjomba_idet = "da";
         } else {
-            roflan.pause();
-            rjomba_idet = "net"
+            if (last_rjomba == rofl) {
+                roflan.pause();
+                rjomba_idet = "net"
+            } else {
+                roflan.src = rofl + ".mp3";
+                last_rjomba = rofl;
+            }
+
         }
     },
-    start_rjomba: function(rofl,loop){
-      roflan = new Audio(rofl+".mp3");
-      roflan.loop = loop;
-      roflan.autoplay = true;
-      roflan.id = "kek";
+    start_rjomba: function(rofl, loop) {
+        roflan = new Audio(rofl + ".mp3");
+        roflan.loop = loop;
+        roflan.autoplay = true;
+        roflan.id = "kek";
     }
 };
 
-//Я ебал
+//Убейте меня

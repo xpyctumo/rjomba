@@ -1,6 +1,9 @@
 var rjomba_idet = "net";
-var roflan = new Audio();
-roflan.autoplay = true;
+document.getElementById("sanya_rjomba").innerHTML = "<audio id=\"rjomba\"></audio>";
+roflan = document.getElementById('rjomba');
+//fucking safari
+
+
 var last_rjomba;
 
 var Sanya = {
@@ -15,13 +18,14 @@ var Sanya = {
                 roflan.pause();
                 rjomba_idet = "net"
             } else {
-                roflan.src = "sanya_cool_man/" + rofl + ".mp3";
+                Sanya.start_rjomba(rofl, true);
                 last_rjomba = rofl;
             }
         }
     },
     start_rjomba: function(rofl, loop) {
-        roflan.src = "sanya_cool_man/" + rofl + ".mp3";
+        roflan.src = "sanya_cool_man/"+rofl+".mp3";
+        roflan.play();
         roflan.loop = loop;
         roflan.id = "kek";
     },
@@ -35,6 +39,7 @@ var Sanya = {
             }
             roflan.src = "sanya_cool_man/" + rjombs[Math.floor(Math.random() * rjombs.length)] + ".mp3";
             roflan.loop = true;
+            roflan.play();
             rjomba_idet = "da";
         } else {
             roflan.pause();
@@ -45,20 +50,26 @@ var Sanya = {
     }
 };
 
-
+//Выше писал, что не хочу хардкодить и все равно хардкод. Мда.
 addEventListener("keydown", function(e) {
     switch (e.keyCode) {
         case 49:
         case 32:
             roflan.src = "sanya_cool_man/odin.mp3";
+            roflan.loop = false;
+            roflan.play();
             break;
         case 50:
         case 91:
             roflan.src = "sanya_cool_man/dva.mp3";
+            roflan.loop = false;
+            roflan.play();
             break;
         case 51:
         case 18:
             roflan.src = "sanya_cool_man/tri.mp3";
+            roflan.loop = false;
+            roflan.play();
             break;
     }
 });

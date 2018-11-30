@@ -3,9 +3,7 @@ document.getElementById("sanya_rjomba").innerHTML = "<audio id=\"rjomba\"></audi
 roflan = document.getElementById('rjomba');
 //fucking safari
 
-
 var last_rjomba;
-
 var Sanya = {
     init_rjomba: function(d) {
         var rofl = d.getAttribute("data-rjaka");
@@ -24,14 +22,14 @@ var Sanya = {
         }
     },
     start_rjomba: function(rofl, loop) {
-        roflan.src = "sanya_cool_man/"+rofl+".mp3";
+        roflan.src = "sanya_cool_man/" + rofl + ".mp3";
         roflan.play();
         roflan.loop = loop;
         roflan.id = "kek";
     },
     random_rjomba: function() {
         if (rjomba_idet == "net") {
-            //ÐŸÐ¾Ð»ÑƒÑ‡Ð¸Ð¼ Ð²ÑÐµ Ñ€Ð¶Ð¾Ð¼Ð±Ñ‹ ÑÐ¾ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð½Ðµ Ñ…Ð°Ñ€Ð´ÐºÐ¾Ð´Ð¸Ñ‚ÑŒ Ð¸Ñ… ÐºÐ°Ð¶Ð´Ñ‹Ð¹ Ñ€Ð°Ð· Ð² js
+            //Ïîëó÷èì âñå ðæîìáû ñî ñòðàíèöû, ÷òîáû íå õàðäêîäèòü èõ êàæäûé ðàç â js
             var rjombs = [];
             var dick = document.getElementsByClassName('Button');
             for (var whore = 0; whore < dick.length - 1; whore++) {
@@ -50,7 +48,7 @@ var Sanya = {
     }
 };
 
-//Ð’Ñ‹ÑˆÐµ Ð¿Ð¸ÑÐ°Ð», Ñ‡Ñ‚Ð¾ Ð½Ðµ Ñ…Ð¾Ñ‡Ñƒ Ñ…Ð°Ñ€Ð´ÐºÐ¾Ð´Ð¸Ñ‚ÑŒ Ð¸ Ð²ÑÐµ Ñ€Ð°Ð²Ð½Ð¾ Ñ…Ð°Ñ€Ð´ÐºÐ¾Ð´. ÐœÐ´Ð°.
+//Âûøå ïèñàë, ÷òî íå õî÷ó õàðäêîäèòü è âñå ðàâíî õàðäêîä. Ìäà.
 addEventListener("keydown", function(e) {
     switch (e.keyCode) {
         case 49:
@@ -75,4 +73,4 @@ addEventListener("keydown", function(e) {
 });
 
 
-//Ð£Ð±ÐµÐ¹Ñ‚Ðµ Ð¼ÐµÐ½Ñ
+//Çà÷åì ÿ æèâó

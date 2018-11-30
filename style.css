@@ -1,0 +1,84 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	color: #000;
+	font-size: 13px;
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	line-height: 1.154;
+	font-weight: 400;
+}
+
+.wrap {
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px 10px 100px;
+	text-align: center
+}
+
+.main {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	right: 0;
+	bottom: 0;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: center;
+	justify-content: center
+}
+
+.Button {
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	font-size: 12.5px;
+	font-weight: 400;
+	line-height: 15px;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: auto;
+	display: inline-block;
+	margin: 0;
+	padding: 7px 16px 8px;
+	zoom: 1;
+	cursor: pointer;
+	white-space: nowrap;
+	outline: none;
+	vertical-align: top;
+	text-align: center;
+	color: #fff;
+	border: 0;
+	border-radius: 4px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background: none;
+	background-color: #5181b8;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.Button,
+.Button:hover {
+	text-decoration: none
+}
+
+.Button:active {
+	padding-top: 8px;
+	padding-bottom: 7px
+}
+
+.Button:disabled {
+	opacity: .5;
+	cursor: default
+}
+
+.Button-secondary {
+	color: #55677d;
+	background-color: #e5ebf1
+}
